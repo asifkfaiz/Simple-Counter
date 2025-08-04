@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="counterApp.css" />
+    <title>Counter Application</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="cont conthead">
+
+        <h1>COUNTER</h1>
+
+      </div>
+
+      <div class="cont contcount">
+
+        <div class="cont1 buttons1">
+
+          <button onclick="dec()" class="minus">
+
+            <i class="fa-solid fa-minus">
+
+            </i></button>
+
+        </div>
+
+        <div class="cont1 counter">
+
+                <h1 id="counter" >0</h1>
+        </div>
+
+        <div class="cont1 buttons2">
+
+          <button onclick="inc()" class="plus">
+
+            <i class="fa-solid fa-plus">
+
+            </i></button>
+
+        </div>
+
+      </div>
+
+      <div class="cont contres">
+
+        <button onclick="reset()" class="reset">
+
+            <i class="fa-solid fa-rotate-left">
+
+            </i></button>
+
+      </div>
+
+    </div>
+
+    <script>
+
+        let count=0;
+
+        function inc() {
+            count+=1;
+            document.getElementById("counter").innerText=count;
+        }
+        function dec() {
+            count-=1;
+            document.getElementById("counter").innerText=count;
+        }
+        function reset() {
+            count=0;
+            document.getElementById("counter").innerText=count;
+            
+        }
+
+    </script>
+  </body>
+</html>
